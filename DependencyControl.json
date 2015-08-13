@@ -283,14 +283,14 @@
       "description": "This will gradient everything.",
       "channels": {
         "master": {
-          "version": "2.0.0",
-          "released": "2015-05-14",
+          "version": "2.0.1",
+          "released": "2015-08-13",
           "default": true,
           "files": [
             {
               "name": ".moon",
               "url": "@{fileBaseUrl}@{fileName}",
-              "sha1": "8FD3BEC3D8A3DD8B39D9EAD7285A3AABA0187B2A"
+              "sha1": "7B4E7B566CF187D1B732C040B5A34BABDB0795A1"
             }
           ],
           "requiredModules": [
@@ -298,7 +298,7 @@
               "moduleName": "lyger.LibLyger",
               "name": "LibLyger",
               "url": "@{baseUrl}",
-              "version": "2.0.0"
+              "version": "2.0.1"
             },
             {
               "moduleName": "SubInspector.Inspector",
@@ -315,11 +315,17 @@
             },
             {
               "moduleName": "aegisub.util"
+            },
+            {
+              "moduleName": "aegisub.re"
             }
           ]
         }
       },
       "changelog": {
+        "2.0.1": [
+          "A bug was fixed that caused Gradient Everything to generate blank lines when no tags in addition to those having a gradient applied were present in the first tag section of a line."
+        ],
         "2.0.0": [
           "Added DependencyControl",
           "The old preset configuration system was swapped out in favor of a DepCtrl-backed solution that uses a standard JSON file. Previous presets from ge-presets.cfg are not transferred automatically.",
@@ -658,14 +664,14 @@
       "fileBaseUrl": "https://raw.githubusercontent.com/TypesettingTools/lyger-Aegisub-Scripts/@{channel}/modules/@{scriptName}",
       "channels": {
         "master": {
-          "version": "2.0.0",
-          "released": "2015-05-14",
+          "version": "2.0.1",
+          "released": "2015-08-13",
           "default": true,
           "files": [
             {
               "name": ".moon",
               "url": "@{fileBaseUrl}@{fileName}",
-              "sha1": "C179CD45005608D314E4B8FA4B9F1C40FA391579"
+              "sha1": "CC6EFF8D1A16190CCB5C2901C9BF1CE3B2FD58FC"
             }
           ],
           "requiredModules": [
@@ -679,6 +685,9 @@
         }
       },
       "changelog": {
+        "2.0.1": [
+          "LibLyger.interpolate() now adds missing tag blocks to line tables (required for Gradient Everything fix)"
+        ],
         "2.0.0": [
           "Added DependencyControl",
           "LibLyger is now a Lua module",

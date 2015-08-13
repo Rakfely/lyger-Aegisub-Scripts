@@ -57,7 +57,7 @@ TODO: Debug, debug, and keep debugging
 
 export script_name = "Gradient Everything"
 export script_description = "This will gradient everything."
-export script_version = "2.0.0"
+export script_version = "2.0.1"
 export script_namespace = "lyger.GradientEverything"
 
 DependencyControl = require "l0.DependencyControl"
@@ -65,7 +65,7 @@ rec = DependencyControl{
     feed: "https://raw.githubusercontent.com/TypesettingTools/lyger-Aegisub-Scripts/master/DependencyControl.json",
     {
         "aegisub.util", "aegisub.re",
-        {"lyger.LibLyger", version: "2.0.0", url: "http://github.com/TypesettingTools/lyger-Aegisub-Scripts"},
+        {"lyger.LibLyger", version: "2.0.1", url: "http://github.com/TypesettingTools/lyger-Aegisub-Scripts"},
         {"l0.ASSFoundation.Common", version: "0.2.0", url: "https://github.com/TypesettingTools/ASSFoundation",
          feed: "https://raw.githubusercontent.com/TypesettingTools/ASSFoundation/master/DependencyControl.json"},
         {"SubInspector.Inspector", version: "0.6.0", url: "https://github.com/TypesettingTools/SubInspector",
