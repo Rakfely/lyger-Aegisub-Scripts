@@ -57,7 +57,7 @@ TODO: Debug, debug, and keep debugging
 
 export script_name = "Gradient Everything"
 export script_description = "This will gradient everything."
-export script_version = "2.0.1"
+export script_version = "2.0.2"
 export script_namespace = "lyger.GradientEverything"
 
 DependencyControl = require "l0.DependencyControl"
@@ -250,7 +250,7 @@ gradient_everything = (sub, sel, res) ->
                 right, bottom = math.max(b.x+b.w, right or 0), math.max(b.y+b.h, bottom or 0)
 
         if left
-            bounds = {left+3, top+3, right+3, bottom+3}
+            bounds = {left-3, top-3, right+3, bottom+3}
         else
             aegisub.log "Nothing to gradient: The selected lines didn't render to any non-transparent pixels."
             return

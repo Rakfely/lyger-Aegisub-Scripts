@@ -283,14 +283,14 @@
       "description": "This will gradient everything.",
       "channels": {
         "master": {
-          "version": "2.0.1",
-          "released": "2015-08-13",
+          "version": "2.0.2",
+          "released": "2015-10-02",
           "default": true,
           "files": [
             {
               "name": ".moon",
               "url": "@{fileBaseUrl}@{fileName}",
-              "sha1": "7B4E7B566CF187D1B732C040B5A34BABDB0795A1"
+              "sha1": "FBFAA9830031959077F770ACA0A21AB181E12BF6"
             }
           ],
           "requiredModules": [
@@ -323,6 +323,9 @@
         }
       },
       "changelog": {
+        "2.0.2": [
+          "Fixed a bug that caused Gradient Everything to chop off top and left pixels when used with SubInspector."
+        ],
         "2.0.1": [
           "A bug was fixed that caused Gradient Everything to generate blank lines when no tags in addition to those having a gradient applied were present in the first tag section of a line."
         ],
