@@ -125,8 +125,7 @@ function grad_char(sub,sel)
 				return ivalue
 			end
 
-			--Replace \N with newline character, so it's treated as one character
-			local ttext=this_table[i-1].text:gsub("\\N","\n")
+			local ttext=this_table[i-1].text
 
 			if ttext:len()>0 then
 
@@ -139,7 +138,7 @@ function grad_char(sub,sel)
 				--Starting values
 				idx=1
 
-				matches=re.find(ttext,'\\X')
+				matches=re.find(ttext,'\\\\[Nh]|\\X')
 
 				total=#matches
 
@@ -195,8 +194,7 @@ function grad_char(sub,sel)
 					first=false
 				end
 
-				--Put \N back in
-				this_table[i-1].text=rtext:gsub("\n","\\N")
+				this_table[i-1].text=rtext
 
 			end
 
