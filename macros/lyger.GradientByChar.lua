@@ -18,7 +18,7 @@ convenience above all, so it runs with a single button press and no time-consumi
 
 script_name = "Gradient by character"
 script_description = "Smoothly transforms tags across your line, by character."
-script_version = "1.3.0"
+script_version = "1.3.1"
 script_author = "lyger"
 script_namespace = "lyger.GradientByChar"
 
