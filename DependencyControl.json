@@ -670,14 +670,14 @@
       "fileBaseUrl": "https://raw.githubusercontent.com/TypesettingTools/lyger-Aegisub-Scripts/@{channel}/modules/@{scriptName}",
       "channels": {
         "master": {
-          "version": "2.0.1",
-          "released": "2015-08-13",
+          "version": "2.0.2",
+          "released": "2016-01-30",
           "default": true,
           "files": [
             {
               "name": ".moon",
               "url": "@{fileBaseUrl}@{fileName}",
-              "sha1": "CC6EFF8D1A16190CCB5C2901C9BF1CE3B2FD58FC"
+              "sha1": "5612622B8D2AEB0FDC1D95A709A63D55360E4384"
             }
           ],
           "requiredModules": [
@@ -691,6 +691,9 @@
         }
       },
       "changelog": {
+        "2.0.2": [
+          "Fixed function call in the constructor"
+        ],
         "2.0.1": [
           "LibLyger.interpolate() now adds missing tag blocks to line tables (required for Gradient Everything fix)"
         ],

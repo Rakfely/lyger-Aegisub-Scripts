@@ -12,7 +12,7 @@ The filename is a bit vain, perhaps, but I couldn't come up with anything else.
 DependencyControl = require("l0.DependencyControl")
 version = DependencyControl{
     name: "LibLyger",
-    version: "2.0.1",
+    version: "2.0.2",
     description: "Library of commonly used functions across all of lyger's automation scripts.",
     author: "lyger",
     url: "http://github.com/TypesettingTools/lyger-Aegisub-Scripts",
@@ -32,7 +32,7 @@ class LibLyger
         }
     }
     new: (sub, sel, generate_furigana) =>
-        @set_script sub, sel, generate_furigana if sub
+        @set_sub sub, sel, generate_furigana if sub
 
     set_sub: (@sub, @sel = {}, generate_furigana = false) =>
         local has_script_info
