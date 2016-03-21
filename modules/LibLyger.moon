@@ -34,8 +34,6 @@ class LibLyger
         @set_sub sub, sel, generate_furigana if sub
 
     set_sub: (@sub, @sel = {}, generate_furigana = false) =>
-        local has_script_info
-
         @script_info, @lines, @dialogue, @dlg_cnt = {}, {}, {}, 0
         for i, line in ipairs sub
             @lines[i] = line
