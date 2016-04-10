@@ -86,13 +86,13 @@ DependencyControl = require "l0.DependencyControl"
 rec = DependencyControl{
     feed: "https://raw.githubusercontent.com/TypesettingTools/lyger-Aegisub-Scripts/master/DependencyControl.json",
     {
-        "aegisub.util",
         {"lyger.LibLyger", version: "2.0.0", url: "http://github.com/TypesettingTools/lyger-Aegisub-Scripts"},
-        {"l0.ASSFoundation.Common", version: "0.2.0", url: "https://github.com/TypesettingTools/ASSFoundation",
-         feed: "https://raw.githubusercontent.com/TypesettingTools/ASSFoundation/master/DependencyControl.json"}
+        {"l0.Functional", version: "0.3.0", url: "https://github.com/TypesettingTools/ASSFoundation",
+         feed: "https://raw.githubusercontent.com/TypesettingTools/Functional/master/DependencyControl.json"},
     }
 }
-util, LibLyger, Common = rec\requireModules!
+LibLyger, Functional = rec\requireModules!
+import list, math, string, table, unicode, util, re from Functional
 logger, libLyger = rec\getLogger!, LibLyger!
 
 -- tag list, grouped by dialog layout
@@ -106,7 +106,7 @@ tags_grouped = {
     {"blur", "be"},
     {"pos", "org", "clip"}
 }
-tags_flat = table.join unpack tags_grouped
+tags_flat = list.join unpack tags_grouped
 
 -- default settings for every preset
 preset_defaults = { skiptext: false, flip_rot: false, accel: 1.0,
