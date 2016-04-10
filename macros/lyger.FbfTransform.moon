@@ -299,7 +299,7 @@ frame_transform = (sub, sel, res) ->
         if preset.c.skiptext
             while not this_line.text\match "^{[^}]+}[^{]"
                 this_line.text = this_line.text\gsub "}{", "", 1
-            tag, text = line.text\match "^({[^}]+})(.+)$"
+            tag, text = this_line.text\match "^({[^}]+})(.+)$"
             this_table = {{:tag, :text}}
         else
             this_table = [{:tag, :text} for tag, text in this_line.text\gmatch "({[^}]*})([^{]*)"]
