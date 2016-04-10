@@ -93,7 +93,6 @@ rec = DependencyControl{
     }
 }
 util, LibLyger, Common = rec\requireModules!
-have_SubInspector = rec\checkOptionalModules "SubInspector.Inspector"
 logger, libLyger = rec\getLogger!, LibLyger!
 
 -- tag list, grouped by dialog layout
@@ -306,7 +305,7 @@ frame_transform = (sub, sel, res) ->
             -- Make sure it has the same splits
             j = 1
             while j <= #start_table
-                stext, stag = start_table[j].text, start_table[j].tag
+                stext = start_table[j].text
                 ttext, ttag = this_table[j].text, this_table[j].tag
 
                 -- ttext might contain miscellaneous tags that are not being checked for,
