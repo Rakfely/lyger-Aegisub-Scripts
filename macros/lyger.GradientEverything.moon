@@ -234,7 +234,7 @@ gradient_everything = (sub, sel, res) ->
     if #bounds == 0
         -- Exit if neither a clip nor the SubInspector module have been found
         unless have_SubInspector
-            aegisub.log "Please put a rectangular clip in one of the selected lines or install SubInspector."
+            logger\warn "Please put a rectangular clip in one of the selected lines or install SubInspector."
             return
 
         -- if no rectangular clip was found, get the combined bounding box of all selected lines
@@ -252,7 +252,7 @@ gradient_everything = (sub, sel, res) ->
         if left
             bounds = {left-3, top-3, right+3, bottom+3}
         else
-            aegisub.log "Nothing to gradient: The selected lines didn't render to any non-transparent pixels."
+            logger\warn "Nothing to gradient: The selected lines didn't render to any non-transparent pixels."
             return
 
 
