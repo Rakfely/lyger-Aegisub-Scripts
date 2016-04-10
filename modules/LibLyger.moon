@@ -140,7 +140,7 @@ class LibLyger
             return "\\"..a
 
         if remove_t
-            new_text = new_text:gsub "\\t%b()", ""
+            new_text = new_text\gsub "\\t%b()", ""
 
         return new_text\gsub "{}", ""
 
