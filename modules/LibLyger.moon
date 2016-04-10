@@ -23,7 +23,6 @@ version = DependencyControl{
     }
 }
 util = version\requireModules!
-logger = version\getLogger!
 
 class LibLyger
     msgs = {
