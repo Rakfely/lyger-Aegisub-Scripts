@@ -349,7 +349,7 @@ class LibLyger
             switch type val
                 when "table"
                     file\write charE
-                    write_table val, file, indent..charS
+                    LibLyger.write_table val, file, indent..charS
                     file\write indent..charS
                 when "string" then file\write LibLyger.exportstring val
                 when "number" then file\write tostring val
