@@ -64,16 +64,17 @@ DependencyControl = require "l0.DependencyControl"
 rec = DependencyControl{
     feed: "https://raw.githubusercontent.com/TypesettingTools/lyger-Aegisub-Scripts/master/DependencyControl.json",
     {
-        "aegisub.util", "aegisub.re",
         {"lyger.LibLyger", version: "2.0.1", url: "http://github.com/TypesettingTools/lyger-Aegisub-Scripts"},
-        {"l0.ASSFoundation.Common", version: "0.2.0", url: "https://github.com/TypesettingTools/ASSFoundation",
-         feed: "https://raw.githubusercontent.com/TypesettingTools/ASSFoundation/master/DependencyControl.json"},
+        {"l0.Functional", version: "0.3.0", url: "https://github.com/TypesettingTools/ASSFoundation",
+         feed: "https://raw.githubusercontent.com/TypesettingTools/Functional/master/DependencyControl.json"},
         {"SubInspector.Inspector", version: "0.6.0", url: "https://github.com/TypesettingTools/SubInspector",
          feed: "https://raw.githubusercontent.com/TypesettingTools/SubInspector/master/DependencyControl.json",
          optional: true}
     }
 }
-util, re, LibLyger, Common, SubInspector = rec\requireModules!
+LibLyger, Functional, SubInspector = rec\requireModules!
+import list, math, string, table, unicode, util, re from Functional
+
 have_SubInspector = rec\checkOptionalModules "SubInspector.Inspector"
 logger, libLyger = rec\getLogger!, LibLyger!
 
@@ -88,7 +89,7 @@ tags_grouped = {
     {"blur", "be"},
     {"pos", "org"}
 }
-tags_flat = table.join unpack tags_grouped
+tags_flat = list.join unpack tags_grouped
 
 -- default settings for every preset
 preset_defaults = { strip: 5, hv_select: "Horizontal", flip_rot: false, accel: 1.0,
@@ -323,7 +324,7 @@ gradient_everything = (sub, sel, res) ->
                 start_state_table[k][ekey] or= current_start_state[ekey] or start_style[ekey]
 
         -- Create a line table based on first_line, but without relevant tags
-        stripped = LibLyger.line_exclude first_line.text, table.join transform_tags, {"clip"}
+        stripped = LibLyger.line_exclude first_line.text, list.join transform_tags, {"clip"}
         this_table = [{:tag, :text} for tag, text in re.ggmatch stripped, tag_section_split]
         -- Inner control loop
         -- For the number of lines indicated by the frames_per table, create a gradient
