@@ -8,7 +8,8 @@
   "maintainer": "lyger",
   "knownFeeds": {
     "SubInspector": "https://raw.githubusercontent.com/TypesettingTools/SubInspector/master/DependencyControl.json",
-    "ASSFoundation": "https://raw.githubusercontent.com/TypesettingTools/ASSFoundation/master/DependencyControl.json"
+    "ASSFoundation": "https://raw.githubusercontent.com/TypesettingTools/ASSFoundation/master/DependencyControl.json",
+    "Functional": "https://raw.githubusercontent.com/TypesettingTools/Functional/master/DependencyControl.json"
   },
   "macros": {
     "lyger.BorderSplit": {
@@ -199,14 +200,14 @@
       "description": "Smoothly transforms between the first and last selected lines.",
       "channels": {
         "master": {
-          "version": "2.0.0",
-          "released": "2015-05-14",
+          "version": "2.0.1",
+          "released": "2016-04-11",
           "default": true,
           "files": [
             {
               "name": ".moon",
               "url": "@{fileBaseUrl}@{fileName}",
-              "sha1": "451BB2F5E146D879010874181C494344E5369357"
+              "sha1": "022A3CDF717096393A3D02E957A736821086E2FC"
             }
           ],
           "requiredModules": [
@@ -217,19 +218,20 @@
               "version": "2.0.0"
             },
             {
-              "moduleName": "l0.ASSFoundation.Common",
-              "name": "ASSFoundation (Common)",
-              "url": "https://github.com/TypesettingTools/ASSFoundation",
-              "version": "0.2.0",
-              "feed": "@{feed:ASSFoundation}"
-            },
-            {
-              "moduleName": "aegisub.util"
+              "moduleName": "l0.Functional",
+              "name": "Functional",
+              "url": "https://github.com/TypesettingTools/Functional",
+              "version": "0.3.0",
+              "feed": "@{feed:Functional}"
             }
           ]
         }
       },
       "changelog": {
+        "2.0.1": [
+          "Fixed a minor isssue uncovered by Moonscript linter.",
+          "Switched to maintained Functional library."
+        ],
         "2.0.0": [
           "Added DependencyControl",
           "The old preset configuration system was swapped out in favor of a DepCtrl-backed solution that uses a standard JSON file. Previous presets from fbf-presets.cfg are not transferred automatically.",
@@ -286,14 +288,14 @@
       "description": "This will gradient everything.",
       "channels": {
         "master": {
-          "version": "2.0.2",
-          "released": "2015-10-02",
+          "version": "2.0.3",
+          "released": "2016-04-11",
           "default": true,
           "files": [
             {
               "name": ".moon",
               "url": "@{fileBaseUrl}@{fileName}",
-              "sha1": "FBFAA9830031959077F770ACA0A21AB181E12BF6"
+              "sha1": "37945D7C41FBD263C133E14F0232C45006B63631"
             }
           ],
           "requiredModules": [
@@ -310,22 +312,20 @@
               "optional": true
             },
             {
-              "moduleName": "l0.ASSFoundation.Common",
-              "name": "ASSFoundation (Common)",
-              "url": "https://github.com/TypesettingTools/ASSFoundation",
-              "version": "0.2.0",
-              "feed": "@{feed:ASSFoundation}"
-            },
-            {
-              "moduleName": "aegisub.util"
-            },
-            {
-              "moduleName": "aegisub.re"
+              "moduleName": "l0.Functional",
+              "name": "Functional",
+              "url": "https://github.com/TypesettingTools/Functional",
+              "version": "0.3.0",
+              "feed": "@{feed:Functional}"
             }
           ]
         }
       },
       "changelog": {
+        "2.0.3": [
+          "Switched to DependencyControl logger module for logging.",
+          "Switched to maintained Functional library."
+        ],
         "2.0.2": [
           "Fixed a bug that caused Gradient Everything to chop off top and left pixels when used with SubInspector."
         ],
@@ -671,13 +671,13 @@
       "channels": {
         "master": {
           "version": "2.0.2",
-          "released": "2016-01-30",
+          "released": "2016-04-11",
           "default": true,
           "files": [
             {
               "name": ".moon",
               "url": "@{fileBaseUrl}@{fileName}",
-              "sha1": "5612622B8D2AEB0FDC1D95A709A63D55360E4384"
+              "sha1": "60723F3FC2BD9D670185C3055D3BC1510EC4B191"
             }
           ],
           "requiredModules": [
@@ -691,6 +691,9 @@
         }
       },
       "changelog": {
+        "2.0.3": [
+          "Fixed some minor issues uncovered by the Moonscript linter."
+        ],
         "2.0.2": [
           "Fixed function call in the constructor"
         ],
