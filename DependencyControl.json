@@ -670,14 +670,14 @@
       "fileBaseUrl": "https://raw.githubusercontent.com/TypesettingTools/lyger-Aegisub-Scripts/@{channel}/modules/@{scriptName}",
       "channels": {
         "master": {
-          "version": "2.0.2",
-          "released": "2016-04-11",
+          "version": "2.0.3",
+          "released": "2018-04-07",
           "default": true,
           "files": [
             {
               "name": ".moon",
               "url": "@{fileBaseUrl}@{fileName}",
-              "sha1": "60723F3FC2BD9D670185C3055D3BC1510EC4B191"
+              "sha1": "DC0347D06CB7F85F98EB592870051FE9A119E4F0"
             }
           ],
           "requiredModules": [
