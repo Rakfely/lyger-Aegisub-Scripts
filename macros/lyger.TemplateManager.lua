@@ -131,7 +131,7 @@ TODO:
 
 script_name = "Template Manager"
 script_description = "Manage typsetting templates."
-script_version = "2.1.0"
+script_version = "2.2.0"
 script_author = "lyger"
 script_namespace = "lyger.TemplateManager"
 
@@ -139,12 +139,13 @@ local DependencyControl = require("l0.DependencyControl")
 local rec = DependencyControl{
 	feed = "https://raw.githubusercontent.com/TypesettingTools/lyger-Aegisub-Scripts/master/DependencyControl.json",
 	{
-		{"l0.ASSFoundation.Common", version = "0.2.0", url = "https://github.com/TypesettingTools/ASSFoundation",
-		 feed = "https://raw.githubusercontent.com/TypesettingTools/ASSFoundation/master/DependencyControl.json"},
-		"aegisub.util", "karaskel"
+    {"l0.Functional", version = "0.5.0", url = "https://github.com/TypesettingTools/Functional",
+      feed = "https://raw.githubusercontent.com/TypesettingTools/Functional/master/DependencyControl.json"},
+		"karaskel"
 	}
 }
-local Common, util = rec:requireModules()
+local Functional = rec:requireModules()
+local table = Functional.table
 
 -- The path to the template manager directory
 local tmpath = aegisub.decode_path("?user/tempman/")
